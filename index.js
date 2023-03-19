@@ -66,7 +66,7 @@ async function donate() {
 
 function listenForTxMined(txResponse, provider) {
   console.log(`Mining ${txResponse.hash}...`);
-  // create a listner for the blockchain
+  // create a listener for the blockchain
   return new Promise((resolve, reject) => {
     provider.once(txResponse.hash, (txReceipt) => {
       // once the txResponse.hash is found, we call the async function
